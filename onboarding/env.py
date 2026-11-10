@@ -20,7 +20,7 @@ def make_env(render_mode: str | None = None, max_episode_steps: int = MAX_EPISOD
     # Gymnasium supplies the reward/reset rules and adds the TimeLimit wrapper.
     env = gym.make(
         "InvertedPendulum-v5",
-        xml_file=SCENE,
+        xml_file=str(SCENE),
         frame_skip=FRAME_SKIP,
         reset_noise_scale=RESET_NOISE,
         max_episode_steps=max_episode_steps,
