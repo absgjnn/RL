@@ -77,7 +77,7 @@ def train(run_name: str, seed: int = 0, total_timesteps: int = 100_000, smoke: b
         model = PPO("MlpPolicy", env, device="cpu", seed=seed, tensorboard_log=str(log_dir), verbose=0, **settings)
 
         # MEMBER TODO 4.2: Train for total_timesteps with tb_log_name="ppo".
-        model.train(total_timesteps=total_timesteps, tb_log_name="ppo")
+        model.learn(total_timesteps=total_timesteps, tb_log_name="ppo")
 
         policy_path.parent.mkdir(parents=True, exist_ok=True)
         # MEMBER TODO 4.3: Save model to policy_path.
