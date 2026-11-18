@@ -1,0 +1,78 @@
+{
+  "run_name": "second-run",
+  "seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009,
+    10010,
+    10011,
+    10012,
+    10013,
+    10014,
+    10015,
+    10016,
+    10017,
+    10018,
+    10019
+  ],
+  "deterministic_policy": true,
+  "action_seed_offset": 20000,
+  "std_ddof": 0,
+  "task": {
+    "environment": "InvertedPendulum-v5",
+    "frame_skip": 2,
+    "max_episode_steps": 1000,
+    "reset_noise_scale": 0.01,
+    "files_sha256": {
+      "assets/cartpole.xml": "2437db32a23e9f25cc1d1e8c661280200654f0d13274583d82ebac029d542326",
+      "assets/scene.xml": "b65de4d8d56aa96a583d3bb5bbd080259ac8ea1d04e84cbf5876c566284a14e2",
+      "onboarding/env.py": "3bbf93f8257965aa625a1575b7bf3aab8514f933033eb7309b6ca66716adb318"
+    }
+  },
+  "versions": {
+    "python": "3.12.3",
+    "gymnasium": "1.2.3",
+    "mujoco": "3.6.0",
+    "stable-baselines3": "2.7.1",
+    "torch": "2.10.0+cpu",
+    "numpy": "2.4.2",
+    "tensorboard": "2.21.0",
+    "imageio-ffmpeg": "0.6.0"
+  },
+  "policy_sha256": "fb9622359db797aabdb7db0072cc3b12de49804fab7631c880583be5af1cded6",
+  "results": {
+    "random": {
+      "episodes": 20,
+      "return_mean": 4.8,
+      "return_std": 2.6570660511172846,
+      "length_mean": 5.8,
+      "length_std": 2.6570660511172846,
+      "time_limit_fraction": 0.0
+    },
+    "ppo": {
+      "episodes": 20,
+      "return_mean": 1000.0,
+      "return_std": 0.0,
+      "length_mean": 1000.0,
+      "length_std": 0.0,
+      "time_limit_fraction": 1.0
+    }
+  },
+  "video": {
+    "path": "videos/second-run/episode-10000.mp4",
+    "seed": 10000,
+    "policy": "ppo",
+    "fps": 25,
+    "width": 640,
+    "height": 480,
+    "frames": 1000,
+    "codec": "h264"
+  }
+}
